@@ -68,3 +68,45 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### More information
+
+Consigna
+El ejercicio consiste en la implementación de un componente según fue provisto por el diseñador.
+El diseño provisto muestra todos los estados posibles y los diferentes tamaños que deben ser implementados.
+
+Objetivo
+El objetivo es conocer las habilidades del candidato con respecto a:
+
+- React, HTML, CSS y herramientas asociadas
+- Diseñar la arquitectura del componente o componentes
+- Seguir el diseño original de la UI provista por el diseñador
+- Desarrollar software
+
+Por lo tanto, es importante tener en cuenta lo siguiente para cumplir el ejercicio:
+
+- Diseño lo más pixel perfect posible
+- Responsividad (ancho mínimo 360px, ancho máximo 1920px)
+- Experiencia del usuario (UX)
+- Experiencia del desarrollador (buenos nombres de props y clases de css, posibilidad de sobrescribir estilos, facilidad de realizar cambios futuros, etc.)
+- Composición de componentes
+- Legibilidad y orden del código
+- Commit messages claros y consistentes
+
+Requerimientos
+
+- Utilizar React
+- Utilizar Storybook para mostrar todos los estados del componente según el diseño
+- Usar Material UI como base
+- Código formateado con standardjs
+- Subir el código a un repositorio de git
+
+Permitido
+
+- Implementar más de un componente, ya sea principal o secundario
+- Usar cualquier tipo de librería que se crea necesaria
+
+Se recomienda
+
+- Diseñar la arquitectura con más de un componente
+- Utilizar componentes funcionales
