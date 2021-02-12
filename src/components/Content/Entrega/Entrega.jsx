@@ -1,6 +1,6 @@
 import React from 'react'
 import  { makeStyles } from '@material-ui/styles'
-import Info from './Info/Info'
+import InfoEntrega from './Info/InfoEntrega'
 import IconCalendar from './IconCalendar/IconCalendar'
 
     const useStyles = makeStyles({
@@ -27,7 +27,7 @@ export default function Entrega() {
     return (
         <div className={classes.container}>
             <IconCalendar/>
-            <Info/>
+            <InfoEntrega/>
         </div>
     )
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
+import Typography from '@material-ui/core/Typography'
+
 
     const useStyles = makeStyles({
         container:{
@@ -58,8 +60,8 @@ export default function Area() {
 
     return (
         <div className={classes.container}>
-            <p className={classes.circle}></p>
-            <p className={classes.text}>Lengua</p>
+            <Typography variant="body1" className={classes.circle} ></Typography>
+            <Typography variant="body1" className={classes.text} >Lengua</Typography>
         </div>
     )
 }

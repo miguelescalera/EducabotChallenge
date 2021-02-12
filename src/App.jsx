@@ -1,10 +1,12 @@
 import React from 'react'
-import Entrega from './components/Content/Entrega/Entrega'
+import BotonDefault from './components/Content/BotonDefault/BotonDefault'
+
+
 
 function App() {
   return (
-    <div style={{height:'100vh', width:'100%', display:'flex', justifyContent:'center', alignContent:'center', background:'#BDBDBD'}}>
-      <Entrega/>
+    <div style={{display:'flex', justifyContent:'center', alignContent:'center', background:'#BDBDBD', height:'100vh'}}>
+      <BotonDefault/>
     </div>
   );
 }

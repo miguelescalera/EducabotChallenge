@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles'
             width: '24px',
             height: '23px',
             left: '0px',
-            top: '1px',    
+            top: '4px',    
         },
         vector1:{
             position: 'absolute',
