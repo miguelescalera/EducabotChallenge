@@ -12,7 +12,7 @@ import Rosca from './Rosca/Rosca'
             position: 'absolute',
             width: '97px',
             height: '36px',
-            right: '168px',
+            left: '711px',
             top: '26px',
         }
     })

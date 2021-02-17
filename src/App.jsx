@@ -1,14 +1,26 @@
 import React from 'react'
-import BotonDefault from './components/Content/BotonDefault/BotonDefault'
+import { makeStyles } from '@material-ui/styles'
+import Default from './container/Default'
 
-
+  const useStyles = makeStyles({
+    container:{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh'
+    }
+  })
 
 function App() {
+
+  const classes = useStyles()
+
   return (
-    <div style={{display:'flex', justifyContent:'center', alignContent:'center', background:'#BDBDBD', height:'100vh'}}>
-      <BotonDefault/>
+    <div className={classes.container}>
+        <Default/>
     </div>
   );
 }
 
 export default App;
+

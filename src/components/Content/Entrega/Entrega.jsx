@@ -15,8 +15,8 @@ import IconCalendar from './IconCalendar/IconCalendar'
             width: '164px',
             height: '36px',
             right: '352px',
+            left:'460px',
             top: '26px',
-            border: '1px solid black'
         }
     })
 
