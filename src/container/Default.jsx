@@ -6,7 +6,9 @@ import AsignaturaMensaje from '../components/Asignatura+Mensajes/AsignaturaMensa
     const useStyles = makeStyles({
         container:{
             height: '128px',
-            width: '976px'
+            width: '976px',
+            marginBottom: '24px'
+
         }
     })
 

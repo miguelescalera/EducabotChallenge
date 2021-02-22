@@ -1,13 +1,14 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import Default from './container/Default'
+import Home from './container/Home' 
 
   const useStyles = makeStyles({
     container:{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh'
+      height: '100vh',
+      background:'#BDBDBD'
     }
   })
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className={classes.container}>
-        <Default/>
+        <Home/>
     </div>
   );
 }

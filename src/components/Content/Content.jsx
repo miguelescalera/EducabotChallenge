@@ -5,7 +5,7 @@ import Texto from './Texto/Texto'
 import Entrega from './Entrega/Entrega'
 import Progreso from './Progreso/Progreso'
 import BotonDefault from './BotonDefault/BotonDefault'
-import zIndex from '@material-ui/core/styles/zIndex'
+
 
     const useStyles = makeStyles({
         container:{
