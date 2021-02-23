@@ -5,10 +5,12 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import HelpIcon from '@material-ui/icons/Help';
 import Typography from '@material-ui/core/Typography'
 import Image from '../assets/unnamed.gif'
-import Default from './Default';
+import Default from './Default'
+
 
     const useStyles = makeStyles({
         container:{
+            maxWidth: '1920px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-around',
@@ -17,9 +19,10 @@ import Default from './Default';
         },
         btn:{
             flexDirection: 'row',
-            fontSize: '25px',
+            fontSize: 'larger',
             width: '300px',
             marginRight: '30px',
+            textTransform: 'none'
         },
         title:{
             display: 'flex',
@@ -57,7 +60,7 @@ export default function Home() {
                     className={classes.btn}
                     variant="contained" 
                     color="primary"
-                    startIcon={<MenuBookIcon/>}
+                    startIcon={<MenuBookIcon/> }
                     >
                         Lectura  
                 </Button>
@@ -71,7 +74,7 @@ export default function Home() {
                 </Button>
             </div>
             
-                {buttonClicked ? (<Default/>, <Default/>) : null}
+                {buttonClicked ? <Default/> : null}
             
         </div>
     )

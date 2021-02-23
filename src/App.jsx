@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Home from './container/Home' 
+import { DataProvider } from './Context/DataContext'
 
   const useStyles = makeStyles({
     container:{
@@ -17,9 +18,11 @@ function App() {
   const classes = useStyles()
 
   return (
-    <div className={classes.container}>
-        <Home/>
-    </div>
+    <DataProvider>
+      <div className={classes.container}>
+          <Home/>
+      </div>
+    </DataProvider>
   );
 }
 

@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{ useContext } from 'react'
+import {DataContext} from '../../../Context/DataContext'
 import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 
@@ -19,6 +20,7 @@ import Button from '@material-ui/core/Button'
             borderRadius: '3px',
         },
         btn:{
+            textTransform: 'none',
             position: 'static',
             width: '78px',
             height: '21px',
@@ -39,11 +41,22 @@ import Button from '@material-ui/core/Button'
 
 export default function BotonDefault() {
 
+    const { estado } = useContext(DataContext)
     const classes = useStyles()
 
     return (
+        (estado.nueva) ?
         <div className={classes.container}>
-            <Button variant="text" disableElevation={true} className={classes.btn}>
+            <Button  variant="text" disableElevation={true} className={classes.btn}>
+              Comenzar
+            </Button>
+        </div>
+        :
+        (estado.terminada) ?
+        null
+        :
+        <div className={classes.container}>
+            <Button  variant="text" disableElevation={true} className={classes.btn}>
               Continuar
             </Button>
         </div>
