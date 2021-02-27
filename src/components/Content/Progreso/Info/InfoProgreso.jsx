@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import { DataContext } from '../../../../Context/DataContext'
 
+export default function InfoProgreso(props) {
 
     const useStyles = makeStyles({
         container:{
@@ -28,12 +28,12 @@ import { DataContext } from '../../../../Context/DataContext'
             top: 'calc(50% - 18px/2 - 9px)',
             fontFamily: 'DM Sans',
             fontStyle: 'normal',
-            fontWeight: 'normal',
+            fontWeight: props.estado === 'terminada' || props.estado === 'correccion' ? 'bold' : 'normal',
             fontSize: '14px',
             lineHeight: '18px',
             display: 'flex',
             alignItems: 'center',        
-            color: '#6D7878'
+            color: props.estado === 'terminada' || props.estado === 'correccion' ? '#1A1A1A' : '#6D7878'
         },
         porcentaje:{
             position: 'static',
@@ -67,29 +67,13 @@ import { DataContext } from '../../../../Context/DataContext'
         }
     })
 
-export default function InfoProgreso() {
-
-    const { estado } = useContext(DataContext)
     const classes = useStyles()
 
     return (
-        (estado.nueva) ? 
         <div className={classes.container}>
-            <Typography variant="body1" className={classes.text}>Progreso</Typography>
-            <Typography variant="body1" className={classes.porcentaje}> - </Typography>
+            <Typography variant="body1" className={classes.text}> {props.estado === 'correccion' ? 'Esperando' : props.estado === 'terminada' ? 'Actividad' : 'Progreso' } </Typography>
+            <Typography variant="body1" className={classes.porcentaje}> {props.estado === 'correccion' ? 'corrección' : props.estado === 'nueva' ? '-' : props.estado === 'terminada' ? 'Completada' : '25%'} </Typography>
         </div>
-        :
-        (estado.terminada) ? 
-        <div className={classes.container}>
-            <Typography variant="body1" className={classes.completa}>Actividad</Typography>
-            <Typography variant="body1" className={classes.completa}>Completada</Typography>
-        </div>
-        : 
-        <div className={classes.container}>
-            <Typography variant="body1" className={classes.text}>Progreso</Typography>
-            <Typography variant="body1" className={classes.porcentaje}>25%</Typography>
-        </div>
-
     )
 }
 

@@ -20,14 +20,14 @@ import IconCalendar from './IconCalendar/IconCalendar'
         }
     })
 
-export default function Entrega() {
+export default function Entrega(props) {
 
     const classes = useStyles()
 
     return (
         <div className={classes.container}>
-            <IconCalendar/>
-            <InfoEntrega/>
+            <IconCalendar estado={props.estado}/>
+            <InfoEntrega estado={props.estado}/>
         </div>
     )
 }

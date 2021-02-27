@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import InfoProgreso from './Info/InfoProgreso'
 import Rosca from './Rosca/Rosca'
+import Correccion from './Correccion/Correccion'
 
     const useStyles = makeStyles({
         container:{
@@ -17,14 +18,14 @@ import Rosca from './Rosca/Rosca'
         }
     })
 
-export default function Progreso() {
+export default function Progreso(props) {
 
     const classes = useStyles()
 
     return (
         <div className={classes.container}>
-            <InfoProgreso />
-            <Rosca/>
+            <InfoProgreso estado={props.estado}/>
+            {props.estado === 'correccion' ? <Correccion/> : <Rosca estado={props.estado}/>}
         </div>
     )
 }

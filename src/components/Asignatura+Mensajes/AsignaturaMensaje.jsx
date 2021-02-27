@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import Area from './Areas/Area'
 import IconMensaje from './Icon-Mensajes/IconMensaje'
-import { DataContext } from '../../Context/DataContext'
+
+export default function AsignaturaMensaje(props) {
 
     const useStyles = makeStyles({
         container:{
@@ -25,7 +26,7 @@ import { DataContext } from '../../Context/DataContext'
             order: '1',
             alignSelf: 'stretch',
             flexGrow: '0',
-            marginTop: '88px',
+            marginTop: props.estado === 'nueva' || props.estado === 'demorada' || props.estado === 'noentregada' ? '108px' : '88px',
         },
         containerTD:{
             boxSizing:'border-box',
@@ -51,18 +52,9 @@ import { DataContext } from '../../Context/DataContext'
         }
     })
 
-export default function AsignaturaMensaje() {
-
-    const { estado } = useContext(DataContext)
     const classes = useStyles()
 
     return (
-        (estado.nueva || estado.demorada) ? 
-        <div className={classes.containerTD}>
-            <Area/>
-            <IconMensaje/>
-        </div>
-        :
         <div className={classes.container}>
             <Area/>
             <IconMensaje/>

@@ -3,10 +3,7 @@ import React, { createContext, useState } from 'react'
 export const DataContext = createContext()
 
 const Estados = {
-    default: false,
-    nueva: true,
-    demorada: false,
-    Terminada: false
+    Estado: ''
 }
 
 export function DataProvider({ children }) {
